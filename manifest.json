@@ -1,0 +1,38 @@
+{
+  "manifest_version": 3,
+  "name": "ez mq",
+  "version": "1.0",
+  "description": "Auto logs in RabbitMQ pages.\n(By Nathan Agcaoili)",
+  "permissions": ["activeTab", "storage"],
+  "action": {
+    "default_popup": "html/popup.html",
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.manh.com/*"],
+      "js": ["js/content.js"]
+    }
+  ],
+  "icons": {
+    "16": "assets/icons/icon16.png",
+    "48": "assets/icons/icon48.png",
+    "128": "assets/icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["assets/*.png", "assets/*.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
+}
