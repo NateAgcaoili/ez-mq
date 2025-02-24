@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "ez mq",
+  "name": "ez mq Dev Build",
   "version": "1.0",
   "description": "Auto logs in RabbitMQ pages.\n(By Nathan Agcaoili)",
   "permissions": ["activeTab", "storage"],
